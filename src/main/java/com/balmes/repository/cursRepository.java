@@ -3,6 +3,7 @@ package com.balmes.repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.balmes.model.Estudiant;
 import org.springframework.stereotype.Repository;
 
 import com.balmes.model.Curs;
@@ -14,16 +15,21 @@ public class cursRepository implements crudRepository<Curs> {
 		// TODO Auto-generated method stub
 		List<Curs> cursos = new ArrayList<Curs>();
 
-//instancio dos cursos i els afegiré a la llista
-		Curs accesADades = new Curs(1, "Modul 6","Acces a dades",
+//instancio dos cursos i els afegirï¿½ a la llista
+		Curs accesADades = new Curs(1, "M06","Acces a dades",
 				"https://ioc.xtec.cat/materials/FP/Recursos/fp_dam_m06_/web/fp_dam_m06_htmlindex/index.html");
 		
-		Curs programacioMultimedia = new Curs(2, "Modul 8","Programacio Multimedia",
+		Curs programacioMultimedia = new Curs(2, "M08","Programacio Multimedia",
 				"https://ioc.xtec.cat/materials/FP/Recursos/fp_dam_m08_/web/fp_dam_m08_htmlindex/index.html");
 		
 		cursos.add(accesADades);
 		cursos.add(programacioMultimedia);
 		
 		return cursos;
+	}
+
+	@Override
+	public List<Estudiant> getEstudiantsperCurs(int CursId) {
+		return null;
 	}
 }

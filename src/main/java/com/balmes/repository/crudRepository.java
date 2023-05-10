@@ -1,12 +1,16 @@
 package com.balmes.repository;
 
+import com.balmes.model.Estudiant;
+
 import java.util.List;
 
 public interface crudRepository<T> {
 	
 	List<T> findAll();
 
-// Per una entitat S, el que fem és desar-la/persistir-la	
+	List<Estudiant> getEstudiantsperCurs(int CursId);
+
+// Per una entitat S, el que fem ï¿½s desar-la/persistir-la	
 //	   <S extends T> S save(S entity);
 
 // Retorna la entitat identificada per la clau amb valor ID	
